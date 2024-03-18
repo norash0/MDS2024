@@ -1,0 +1,111 @@
+PS C:\Users\Univalle\Documents\trabajoMTD> git version //escrito
+git version 2.40.1.windows.1
+/////para ver si esta instalada git
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git init //escrito
+Initialized empty Git repository in C:/Users/Univalle/Documents/trabajoMTD/.git/
+////inicializa repositorio -- documentos en u, esto solo lo hacemos solo una vez
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git config user.name "sharon bejarano"
+PS C:\Users\Univalle\Documents\trabajoMTD> git config user.email "sharon.bejarano@correounivalle.edu.co"
+////agregando credenciales, solo es necesario una sola vez, 
+¡estos apareceran cuando compartas el link de la página por ello elegir un nombre adecuado! 
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git add .
+////agrego todos los archivos al area temporal
+
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git add "nombre"
+////agrego un archivo especifico al area temporal
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git commit -m "se agrega version0.0" //escrito
+[master (root-commit) ee4eb26] se agrega version0.0
+ 3 files changed, 13 insertions(+)
+ create mode 100644 estilo.css
+ create mode 100644 logica.js
+ create mode 100644 visula.html
+//// guardar en remoto
+
+
+((ise un cambio en un archivo))
+PS C:\Users\Univalle\Documents\trabajoMTD> git add . /////escrito
+PS C:\Users\Univalle\Documents\trabajoMTD> git commit -m "se agrega linea en logica" //escrito
+[master ff841db] se agrega linea en logica
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git reset --hard ee4eb26 //escrito
+HEAD is now at ee4eb26 se agrega version0.0
+////me muevo a otra version en este caso  el anterior
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git log --oneline       
+ee4eb26 (HEAD -> master) se agrega version0.0
+////desaparece la version"futura" por donde nos ubicamos pero es a version sigue por ahi.
+
+
+
+----luego de tener cuenta con githud
+PS C:\Users\Univalle\Documents\trabajoMTD> git push //////escrito
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.39 KiB | 1.39 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/norash0/MDS2024.git
+   ff841db..243b07b  main -> main
+///se iso un cambio desde visual studio code con esto es para trasladar el acmbio a githud pero primero debes hacer git add y git commit luego puede hacer git push
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git pull  //////escrito
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 928 bytes | 9.00 KiB/s, done.
+From https://github.com/norash0/MDS2024
+   243b07b..6862eca  main       -> origin/main
+Updating 243b07b..6862eca
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+//////se hizo cambios en githud "algun compañero" tu pasas ese archivo de git hud a visual studios code con git pull
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git branch Pruebas //escrito
+PS C:\Users\Univalle\Documents\trabajoMTD> git branch        ////escrito
+  Pruebas
+* main
+////creando otras ramas para no trabajar con el archivo principal, si no con una copia
+
+PS C:\Users\Univalle\Documents\trabajoMTD> git checkout main   ///escrito
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+////cambio de rama
+
+
+*----**-------------****----------
+
+encontraremos muchos repositorios pero estos necesitan siempre git
+
+github gitlab bitbucket
+
+usamos github creamos una cuenta y luego de crear un repositorio copiamos y pegamos en visual studio code "de a una linea cada git no todo a la vez" 
+
+git remote add origin https://github.com/norash0/MDS2024.git
+git branch -M main
+git push -u origin main
+
+recargas github y se enlaza nuestro repositorio local con el remoto
+
+en archivo visual agregamos despues de la linea <body>
+
+<h1>Agregar cambio en remoto</h1>//este es un titulo
+
+origin/main hace referencia a la version archvo que esta remoto y el de verde es el local
+
+git branch -D Pruebas
+
+
+
+
+
